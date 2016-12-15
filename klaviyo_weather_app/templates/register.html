@@ -1,0 +1,35 @@
+<h2>Register</h2>
+<form class="form-horizontal" action="" method="POST">
+
+  <body>
+    {% with messages = get_flashed_messages() %}
+       {% if messages %}
+	      {% for message in messages %}
+		     {{ message }}
+	      {% endfor %}
+       {% endif %}
+    {% endwith %}
+  </body>
+
+  <fieldset>
+    <div class="input-prepend" title="Email">
+      <input class="input-large" name="email_addr" id="email_addr" type="text" placeholder="Email" value=""/>
+    </div>
+    <div class="clearfix"></div>
+
+    <select name="location">
+      {% for city in cities %}
+      <option value="{{ city }}">{{ city }}</option>
+      {% endfor %}
+    </select>
+
+    <div class="clearfix"></div>
+
+    <div class="btn-group button-login pull-right">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+    <div class="clearfix"></div>
+  </fieldset>
+</form>
+
+
