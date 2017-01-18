@@ -3,7 +3,6 @@ import re
 from flask import jsonify, make_response, render_template, request
 
 from klaviyo_weather_app import redis, app
-from klaviyo_weather_app.emailer import email_the_users
 from klaviyo_weather_app import cities
 
 
