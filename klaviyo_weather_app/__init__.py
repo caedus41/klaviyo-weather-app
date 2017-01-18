@@ -15,4 +15,3 @@ app = Flask(__name__)
 # necessary until the application needs to scale
 import klaviyo_weather_app.register
 import klaviyo_weather_app.weather
-import klaviyo_weather_app.emailer
