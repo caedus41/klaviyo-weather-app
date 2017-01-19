@@ -7,7 +7,7 @@ from flask import Flask, request, render_template
 redis = redis.StrictRedis(host='localhost', port=6379, db=0)
 
 # Initialize the flask app
-app = Flask(__name__)
+application = Flask(__name__)
 
 # Import the views
 # NOTE: this is a circular import but because we don't do anything in this file

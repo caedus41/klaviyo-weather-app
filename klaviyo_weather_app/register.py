@@ -2,7 +2,7 @@ import re
 
 from flask import jsonify, make_response, render_template, request
 
-from klaviyo_weather_app import redis, app
+from klaviyo_weather_app import redis, application
 from klaviyo_weather_app import cities
 
 
@@ -14,7 +14,7 @@ class UserExistsException(Exception):
     pass
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def get():
     try:
         return render_template('register.html', cities=[c[1] for c in cities.cities])
@@ -22,7 +22,7 @@ def get():
         print e
 
 
-@app.route('/', methods=['POST'])
+@application.route('/', methods=['POST'])
 def post():
         try:
             # Get email from form and validate it
